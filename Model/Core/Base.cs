@@ -8,8 +8,8 @@ namespace Model
 {
     public class Base
     {
-        public Guid Id { get; set; }
-        public DateTime DataCriacao { get; set; }
-        public DateTime DataModificacao { get; set; }
+        public Guid Id { get; protected set; }
+        public DateTime DataCriacao { get; protected set; }
+        public DateTime DataModificacao { get; protected set; }
     }
 }

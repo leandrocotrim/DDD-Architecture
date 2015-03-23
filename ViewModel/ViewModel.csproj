@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A13B1A63-2DB7-4A45-84FA-B0580E8E228C}</ProjectGuid>
+    <ProjectGuid>{0FCB686D-4FBD-42F2-9223-BF713B1192C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
+    <RootNamespace>ViewModel</RootNamespace>
+    <AssemblyName>ViewModel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,13 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\packages\CommonServiceLocation.1.0.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,34 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultorio\TipoUsuario\TipoUsuario.cs" />
-    <Compile Include="Consultorio\TipoUsuario\Permissao.cs" />
-    <Compile Include="Consultorio\Pessoa\Usuario.cs" />
-    <Compile Include="Events\DomainEvent.cs" />
-    <Compile Include="Events\DomainEvents.cs" />
-    <Compile Include="Events\Class\EnviarEmail.cs" />
-    <Compile Include="Events\Interface\IEventHandler.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Consultorio\Agenda\AgendaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Consultorio\Agenda\Agenda.cs" />
-    <Compile Include="Consultorio\Agenda\Consulta.cs" />
-    <Compile Include="Core\Base.cs" />
-    <Compile Include="Consultorio\Especialidade\Especialidade.cs" />
-    <Compile Include="Consultorio\Pessoa\Medico.cs" />
-    <Compile Include="Consultorio\Pessoa\Paciente.cs" />
-    <Compile Include="Consultorio\Pessoa\Pessoa.cs" />
-    <Compile Include="Consultorio\Pessoa\Secretaria.cs" />
-    <Compile Include="Specification\Abstract\CompositeSpecificationBase.cs" />
-    <Compile Include="Specification\Abstract\SpecificationBase.cs" />
-    <Compile Include="Specification\Classes\AndSpecification.cs" />
-    <Compile Include="Specification\Classes\NegatedSpecification.cs" />
-    <Compile Include="Specification\Classes\OrSpecification.cs" />
-    <Compile Include="Specification\Extensions\ISpecificationExtensions.cs" />
-    <Compile Include="Specification\Interfaces\ISpecification.cs" />
-    <Compile Include="ValueObject\TipoPaciente.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Consultorio\Custom\" />
+    <Folder Include="Consultorio\Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

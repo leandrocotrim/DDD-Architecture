@@ -8,7 +8,6 @@ namespace Model
 {
     public class Usuario : Pessoa
     {
-        //public Guid PessoaId { get; protected set; }
         public Pessoa Pessoa { get; protected set; }
 
         public bool Ativo { get; protected set; }
@@ -19,8 +18,7 @@ namespace Model
         public ICollection<Permissao> _permissoes; 
         public ICollection<Permissao> Permissoes 
         {
-            get { return _permissoes; }
-            protected set { _permissoes = new List<Permissao>(value); }
+            get { return _permissoes; } protected set { _permissoes = new List<Permissao>(value); }
         }
 
         protected Usuario() { _permissoes = new List<Permissao>(); }
@@ -32,19 +30,8 @@ namespace Model
             this._permissoes = new List<Permissao>();
         }
 
-        public void DesativaUsuario()
-        {
-            this.Ativo = false;
-        }
-
-        public void AtivaUsuario()
-        {
-            this.Ativo = true;
-        }
-
-        public void AddPermissao(Permissao permissao)
-        {
-            this._permissoes.Add(permissao);
-        }
+        public void DesativaUsuario() { this.Ativo = false; }
+        public void AtivaUsuario() { this.Ativo = true; }
+        public void AddPermissao(Permissao permissao) { this._permissoes.Add(permissao); }
     }
 }

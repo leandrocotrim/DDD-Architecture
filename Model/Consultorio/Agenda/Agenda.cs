@@ -12,14 +12,14 @@ namespace Model
         public string Descricao { get; protected set; }
         public DateTime DataAbertura { get; protected set; }
         public DateTime DataFechamento { get; protected set; }
+
         public Guid MedicoId { get; protected set; }
         public Medico Medico { get; protected set; }
 
         private ICollection<Consulta> _consultas;
         public ICollection<Consulta> Consultas 
         {
-            get { return _consultas; }
-            protected set { _consultas = new List<Consulta>(value); }
+            get { return _consultas; } protected set { _consultas = new List<Consulta>(value); }
         }
 
         protected Agenda() { _consultas = new List<Consulta>(); }

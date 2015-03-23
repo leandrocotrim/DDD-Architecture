@@ -9,8 +9,10 @@ namespace Model
     public class Consulta : Base
     {
         public DateTime DataAgendamento { get; protected set; }
+
         public Guid AgendaId { get; protected set; }
         public Agenda Agenda { get; protected set; }
+
         public Guid PacienteId { get; protected set; } 
         public Paciente Paciente { get; protected set; }
 

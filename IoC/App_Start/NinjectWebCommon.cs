@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WebApi.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(WebApi.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(IoC.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(IoC.App_Start.NinjectWebCommon), "Stop")]
 
-namespace WebApi.App_Start
+namespace IoC.App_Start
 {
     using System;
     using System.Web;
@@ -10,10 +10,10 @@ namespace WebApi.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using System.Web.Http;
-    using Ninject.Web.WebApi;
     using Service.Consultorio.Agenda;
     using RepositoryEF.Repositories.Consultorio.Agenda;
+    using System.Web.Http;
+    using Ninject.Web.WebApi;
 
     public static class NinjectWebCommon 
     {
@@ -74,6 +74,6 @@ namespace WebApi.App_Start
             // Set Web API Resolver
             configuration.DependencyResolver = new NinjectDependencyResolver(bootstrapper.Kernel);
 
-        }
+        }      
     }
 }

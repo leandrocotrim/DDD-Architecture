@@ -7,7 +7,6 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
-using WebApi.App_Start;
 
 namespace WebApi
 {
@@ -20,7 +19,7 @@ namespace WebApi
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            NinjectWebCommon.RegisterNinject(GlobalConfiguration.Configuration);
+            IoC.App_Start.NinjectWebCommon.RegisterNinject(GlobalConfiguration.Configuration);
         }
     }
 }

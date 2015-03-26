@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataEF.Mapping.TipoUsuario
+namespace RepositoryEF.Mapping.Consultorio.TipoUsuario
 {
     public class TipoUsuarioMap : BaseEntityConfiguration<Model.TipoUsuario>
     {

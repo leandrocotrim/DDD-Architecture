@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataEF.Mapping
+namespace RepositoryEF.Mapping
 {
     public class BaseEntityConfiguration<T> : EntityTypeConfiguration<T> where T : Model.Base     
     {

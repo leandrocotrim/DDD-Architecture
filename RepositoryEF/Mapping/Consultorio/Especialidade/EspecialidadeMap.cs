@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataEF.Mapping
+namespace RepositoryEF.Mapping
 {
     public class EspecialidadeMap : BaseEntityConfiguration<Model.Especialidade>
     {

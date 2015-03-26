@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Consultorio.Agenda
+namespace RepositoryEF.Repositories.Consultorio.Agenda
 {
-    public interface ISrvAgenda
+    public interface IRepAgenda
     {
         string ObeterString();
     }

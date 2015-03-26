@@ -12,6 +12,8 @@ namespace WebApi.App_Start
     using Ninject.Web.Common;
     using System.Web.Http;
     using Ninject.Web.WebApi;
+    using Service.Consultorio.Agenda;
+    using RepositoryEF.Repositories.Consultorio.Agenda;
 
     public static class NinjectWebCommon 
     {
@@ -63,7 +65,8 @@ namespace WebApi.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<Service.ISrvAgenda>().To<Service.SrvAgenda>();
+            kernel.Bind<ISrvAgenda>().To<SrvAgenda>();
+            kernel.Bind<IRepAgenda>().To<RepAgenda>();
         }
 
         public static void RegisterNinject(HttpConfiguration configuration)

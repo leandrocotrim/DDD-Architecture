@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Service.Consultorio.Agenda;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Factory
     {
         public static void Configure()
         {
-            Mapper.DynamicMap<Service.ISrvAgenda>(new Service.SrvAgenda());
+            //Mapper.DynamicMap<ISrvAgenda>(new SrvAgenda());
         }
     }
 }

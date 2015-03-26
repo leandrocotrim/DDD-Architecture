@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.Consultorio.Agenda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,8 +10,8 @@ namespace WebApi.Controllers
 {
     public class AgendaController : ApiController
     {
-        private Service.ISrvAgenda _srvAgenda;
-        public AgendaController(Service.ISrvAgenda srvAgenda)
+        private ISrvAgenda _srvAgenda;
+        public AgendaController(ISrvAgenda srvAgenda)
         {
             _srvAgenda = srvAgenda;
         }
@@ -18,7 +19,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public string Teste()
         {
-            return "funcionou";
+            return _srvAgenda.ObeterString();
         }
     }
 }

@@ -43,7 +43,28 @@
     <Compile Include="Consultorio\Agenda\SrvAgenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{a13b1a63-2db7-4a45-84fa-b0580e8e228c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryDAL\RepositoryDAL.csproj">
+      <Project>{63ac52aa-b032-41b3-9d74-189c2fe77fd6}</Project>
+      <Name>RepositoryDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryEF\RepositoryEF.csproj">
+      <Project>{c36b1980-31ba-4411-bdda-85c06602de64}</Project>
+      <Name>RepositoryEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RepositoryNH\RepositoryNH.csproj">
+      <Project>{3b5cf277-9761-4db6-893b-aa287a625768}</Project>
+      <Name>RepositoryNH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj">
+      <Project>{0fcb686d-4fbd-42f2-9223-bf713b1192c4}</Project>
+      <Name>ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

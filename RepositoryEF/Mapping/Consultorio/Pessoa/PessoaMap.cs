@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataEF.Mapping.Pessoa
+namespace RepositoryEF.Mapping.Consultorio.Pessoa
 {
     public class PessoaMap : BaseEntityConfiguration<Model.Pessoa>
     {

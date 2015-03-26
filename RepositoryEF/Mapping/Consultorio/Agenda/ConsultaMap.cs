@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataEF.Mapping.Agenda
+namespace RepositoryEF.Mapping.Consultorio.Agenda
 {
     public class ConsultaMap : BaseEntityConfiguration<Model.Consulta>
     {

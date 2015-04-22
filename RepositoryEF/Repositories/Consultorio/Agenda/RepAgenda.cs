@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace RepositoryEF.Repositories.Consultorio.Agenda
 {
-    public class RepAgenda : IRepAgenda
+    public partial class RepAgenda : IRepAgenda, IDisposable
     {
         public string ObeterString()
         {
             return "string do repository EF....";
         }
+
+        public void Dispose() { }
     }
 }
